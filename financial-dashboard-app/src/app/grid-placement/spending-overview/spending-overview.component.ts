@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SpendingService } from '../shared/spending.service';
+import { SpendingService } from '../../shared/spending.service';
 
 @Component({
   selector: 'app-spending-overview',
