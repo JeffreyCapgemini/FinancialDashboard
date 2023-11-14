@@ -1,0 +1,56 @@
+.spending-overview-container {
+    background-color: #151a32;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    margin-left: 30px;
+    color: white;
+    font-size: 25px;
+  }
+  
+  p,
+  h3 {
+    color: white;
+    margin: 0;
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  
+  .spendings {
+    list-style-type: none;
+    padding: 0; /* optional: removes default padding */
+    margin: 0; /* optional: removes default margin */
+    border-radius: 20px;
+    max-width: 300px;
+    height: 270px;
+    padding-top: 7px;
+  }
+  
+  .spending-subjects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .housing,
+  .personal,
+  .transportation {
+    display: flex; /* Use flexbox for the container */
+    align-items: center; /* Align items vertically in the center (optional) */
+  }
+  
+  .house-icon,
+  .personal-icon,
+  .transportation-icon {
+    margin-right: 10px; /* Adjust margin as needed */
+  }
+  
