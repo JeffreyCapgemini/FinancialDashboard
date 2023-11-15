@@ -1,0 +1,28 @@
+.spendings-container {
+    background-color: #151a32;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .spendingsInput {
+    padding-left: 15px;
+    padding-top: 7px;
+  }
+  
+  .totalCost {
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  
+  .spendings {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .chartLine {
+    margin: 0;
+    stroke-width: 3px;
+    mask-image: linear-gradient(to left, transparent, #000, #000, transparent);
+  }
+  

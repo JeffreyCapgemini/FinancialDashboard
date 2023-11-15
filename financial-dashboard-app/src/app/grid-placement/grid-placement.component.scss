@@ -1,0 +1,63 @@
+main {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 0.3fr 1fr 1.5fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    font-family: system-ui;
+    background-color: #0b1021;
+    grid-template-areas:
+      "navigation balance . date account"
+      "navigation total-net-worth spendings spending income-goal"
+      "navigation income-source income spending notifications-expenses-animals"
+      "navigation income-expenses-graph income-expenses-graph . notifications-expenses-animals";
+  }
+  
+  .navigation {
+    grid-area: navigation;
+  }
+  
+  .balance {
+    grid-area: balance;
+  }
+  
+  .date {
+    grid-area: date;
+  }
+  
+  .account {
+    grid-area: account;
+  }
+  
+  .total-net-worth {
+    grid-area: total-net-worth;
+  }
+  
+  .spendings {
+    grid-area: spendings;
+  }
+  
+  .income {
+    grid-area: income;
+  }
+  
+  .income-source {
+    grid-area: income-source;
+  }
+  
+  .spending {
+    grid-area: spending;
+  }
+  
+  .income-goal {
+    grid-area: income-goal;
+  }
+  
+  .notifications-expenses-animals {
+    grid-area: notifications-expenses-animals;
+  }
+  
+  .income-expenses-graph {
+    grid-area: income-expenses-graph;
+  }
+  
