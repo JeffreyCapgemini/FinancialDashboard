@@ -17,7 +17,10 @@ ngOnInit(): void {
     this.personalSpending = +this.spendingService.getTotalCostOfSubject('Personal').toFixed(2);
 
     this.transportSpending = +this.spendingService.getTotalCostOfSubject('Transport').toFixed(2);
+}
 
+openAddSpendings(){
+  
 }
 
 constructor(private spendingService: SpendingService){}

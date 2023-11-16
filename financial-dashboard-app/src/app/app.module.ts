@@ -7,6 +7,10 @@ import { IncomeSourceComponent } from './income-source/income-source.component';
 import { SpendingsComponent } from './grid-placement/spendings/spendings.component';
 import { SpendingOverviewComponent } from './grid-placement/spending-overview/spending-overview.component';
 import { GridPlacementComponent } from './grid-placement/grid-placement.component';
+import { AddSpendingsComponent } from './add-spendings/add-spendings.component';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 
 @NgModule({
@@ -15,11 +19,14 @@ import { GridPlacementComponent } from './grid-placement/grid-placement.componen
     IncomeSourceComponent,
     SpendingsComponent,
     SpendingOverviewComponent,
-    GridPlacementComponent
+    GridPlacementComponent,
+    AddSpendingsComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule.forRoot()
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
