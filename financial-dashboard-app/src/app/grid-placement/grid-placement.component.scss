@@ -1,3 +1,5 @@
+@import '../../stylings/_variables.scss';
+
 main {
     display: grid;
     grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr;
@@ -5,7 +7,7 @@ main {
     gap: 10px 10px;
     grid-auto-flow: row;
     font-family: system-ui;
-    background-color: #0b1021;
+    background-color: $primary-color;
     grid-template-areas:
       "navigation balance . date account"
       "navigation total-net-worth spendings spending income-goal"

@@ -1,12 +1,14 @@
+@import '../../stylings/_variables.scss';
+
 .incomeSourceContainer {
     display: flex;
     justify-content: space-evenly;
     max-width: 500px;
     position: relative;
     border-radius: 20px;
-    background-color: #151a32;
-    color: white;
-    padding: 1em;
+    background-color: $secondary-color;
+    color: $white;
+    padding: $padding;
 
     .h2 {
         position: absolute;
