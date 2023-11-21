@@ -2,7 +2,7 @@
   <div class="spendings">
     <header class="spendingsheader">
       <h3>Spendings</h3>
-      <button type="button" class="AddSpendings" (click)="openAddSpendings()">
+      <button type="button" class="AddSpendings" (click)="dialog.show()">
         <img
           src="../../../assets/img/add-button.svg"
           alt="add button"
@@ -22,7 +22,7 @@
         </div>
         <div class="house-text">
           <p>Housing</p>
-          <p>${{ houseSpending }}</p>
+          <p>€{{ houseSpending }}</p>
         </div>
       </div>
       <div class="personal">
@@ -31,7 +31,7 @@
         </div>
         <div class="personal-text">
           <p>Personal</p>
-          <p>${{ personalSpending }}</p>
+          <p>€{{ personalSpending }}</p>
         </div>
       </div>
       <div class="transportation">
@@ -44,9 +44,50 @@
         </div>
         <div class="transportation-text">
           <p>Transportation</p>
-          <p>${{ transportSpending }}</p>
+          <p>€{{ transportSpending }}</p>
         </div>
       </div>
     </li>
   </div>
+  <dialog #dialog>
+    <section class="add-spendings">
+      <h1>Add spendings</h1>
+      <form class="addSpendings">
+        <label for="expenseTitle">Expense Title</label>
+        <input
+          type="text"
+          id="expenseTitle"
+          placeholder="Expense title"
+          #expenseinput
+        />
+
+        <label for="cost">Cost</label>
+        <input type="number" id="cost" placeholder="$" #costInput />
+
+        <label for="date">Date</label>
+        <input type="text" id="date" placeholder="ddmmyy" #dateInput />
+
+        <label for="subject">Subject</label>
+        <select name="subject" id="subject" #subjectInput>
+          <option value="Housing">Housing</option>
+          <option value="Personal">Personal</option>
+          <option value="Transport">Transport</option>
+        </select>
+        <button
+          type="button"
+          (click)="
+            submit(
+              expenseinput.value,
+              +costInput.value,
+              dateInput.value,
+              subjectInput.value
+            )
+          "
+        >
+          Add spending
+        </button>
+        <button type="button" (click)="dialog.close()">Close</button>
+      </form>
+    </section>
+  </dialog>
 </section>

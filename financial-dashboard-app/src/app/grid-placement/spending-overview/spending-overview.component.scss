@@ -1,6 +1,7 @@
 @import '../../../stylings/_variables.scss';
 
 .spending-overview-container {
+  position: relative;
     background-color: $secondary-color;
     color: $white;
     border-radius: 20px;
@@ -65,5 +66,30 @@
   .AddSpendings{
     background-color: transparent;
     border: none;
+  }
+
+  dialog {
+    position: absolute;
+    z-index: 1;
+    left: -50%;
+    top: 50%;
+    padding: 20px;
+    background-color: #151a32;
+    color: white;
+    border-radius: 5px;
+    width: 80%;
+    align-items: center;
+  
+    .addSpendings {
+      display: flex;      
+      flex-direction: column;
+    
+      label{margin-bottom: 5px;}
+
+      input{margin-bottom: 20px;}
+
+      button{margin-top: 40px;}
+
+    }
   }
   
