@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { GridPlacementComponent } from './grid-placement/grid-placement.component';
-import { AddSpendingsComponent } from './add-spendings/add-spendings.component';
+import { RouterModule, Routes } from '@angular/router';``
 
 const routes: Routes = [
 ];

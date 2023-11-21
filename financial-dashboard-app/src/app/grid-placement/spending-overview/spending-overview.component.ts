@@ -6,23 +6,26 @@ import { SpendingService } from '../../shared/spending.service';
   templateUrl: './spending-overview.component.html',
   styleUrl: './spending-overview.component.scss'
 })
+
 export class SpendingOverviewComponent implements OnInit{
   houseSpending: number = 0;
   personalSpending: number = 0;
   transportSpending: number = 0;
 
-ngOnInit(): void {
+  ngOnInit(): void {
+    this.updateSpending();
+  }
+
+  constructor(private spendingService: SpendingService){}
+
+  updateSpending() {
     this.houseSpending = +this.spendingService.getTotalCostOfSubject('Housing').toFixed(2);
+    this.personalSpending = +this.spendingService.getTotalCostOfSubject('Personal');
+    this.transportSpending = +this.spendingService.getTotalCostOfSubject('Transport');
+  }
 
-    this.personalSpending = +this.spendingService.getTotalCostOfSubject('Personal').toFixed(2);
-
-    this.transportSpending = +this.spendingService.getTotalCostOfSubject('Transport').toFixed(2);
-}
-
-openAddSpendings(){
-  
-}
-
-constructor(private spendingService: SpendingService){}
-
+  submit(expenseName: string, cost: number, date: string, subject: string) {
+    this.spendingService.addSpending(expenseName, cost, date, subject);
+    this.updateSpending();
+  }
 }
