@@ -23,7 +23,6 @@ export class LatestSpendingsComponent implements OnInit, DoCheck  {
   }
 
   getLatestSpendings() {
-    // return this.spendings.dateFilter();
     return this.spendings.getLatestObjects();
   }
   

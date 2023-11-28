@@ -82,7 +82,6 @@ export class SpendingService {
       if (!isNaN(billingDate.getTime())) {
         const newSpending = { name, cost, billingDate, subject, timestamp: this.generateTimestamp() };
         this.spending[subject].push(newSpending);
-        console.log('Updated spendings:', this.spending);
       } else {
         alert('Invalid date entered. Please enter a valid date.');
       }
@@ -108,7 +107,6 @@ export class SpendingService {
         // Return the first three objects in the sorted array
         return allObjects.slice(0, 3);
       } else {
-        console.log('No objects found.');
         return [];
       }
   }
