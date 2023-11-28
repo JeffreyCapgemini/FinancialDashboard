@@ -1,0 +1,13 @@
+@import "../../stylings/variables";
+
+.income-vs-outcome {
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    padding: $padding;
+    color: $white;
+
+    &__tekst {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

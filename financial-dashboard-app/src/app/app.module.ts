@@ -9,6 +9,8 @@ import { SpendingOverviewComponent } from './grid-placement/spending-overview/sp
 import { GridPlacementComponent } from './grid-placement/grid-placement.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { IncomeVsOutcomeComponent } from './income-vs-outcome/income-vs-outcome.component';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 
 
@@ -21,10 +23,12 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     SpendingOverviewComponent,
     GridPlacementComponent,
     DropdownDirective,
+    IncomeVsOutcomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CanvasJSAngularChartsModule,
     ModalModule.forRoot()
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
