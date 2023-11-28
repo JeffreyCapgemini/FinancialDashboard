@@ -1,6 +1,6 @@
 <section class="incomeSourceContainer">
     <h2 class="h2">Income Source</h2>
-    <div class="incomeSource" *ngFor="let income of incomeSources">
+    <div class="incomeSource" *ngFor="let income of incomeService.incomeSources">
         <h3>€{{income.income}}</h3>
         <div class="income" [ngStyle]="{'height' : income.percentage + 'px', 'backgroundColor' : income.color}"></div>
         <p>{{income.name}}</p>

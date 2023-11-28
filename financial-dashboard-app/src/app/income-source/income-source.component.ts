@@ -1,39 +1,16 @@
 import { Input } from '@angular/core';
 import { Component } from '@angular/core';
+import { IncomeService } from '../shared/income.service';
 
 @Component({
   selector: 'app-income-source',
   templateUrl: './income-source.component.html',
-  styleUrl: './income-source.component.scss'
+  styleUrl: './income-source.component.scss',
+  providers: [IncomeService]
 })
-export class IncomeSourceComponent  {
-  // @Input() totalIncome: number = 0;
+export class IncomeSourceComponent {
 
-  income: number = 0;
-
-  incomeSources = [{
-    income: 2700,
-    name: 'Salaris',
-    percentage: 0,
-    color: 'green'
-  }, {
-    income: 500,
-    name: 'Zorgtoeslag',
-    percentage: 0,
-    color:'red'
-  }, {
-    income: 1000,
-    name: 'ZZP',
-    percentage: 0,
-    color: 'blue'
-  }, {
-    income: 100,
-    name: 'Marktplaats',
-    percentage: 0,
-    color: 'orange'
-  }]
-
-  constructor() {
+  constructor(public incomeService: IncomeService) {
   }
 
   ngOnInit() {
