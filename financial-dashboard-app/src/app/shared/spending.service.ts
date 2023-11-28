@@ -4,19 +4,19 @@ export class SpendingService {
       {
         name: 'Car Insurance',
         cost: 150.00,
-        billingDate: new Date(2023, 10, 15), // November 15, 2023
+        billingDate: new Date(2023, 10, 15),
         subject: 'Housing',
       },
       {
         name: 'House Insurance',
         cost: 200.00,
-        billingDate: new Date(2023, 10, 20), // November 20, 2023
+        billingDate: new Date(2023, 10, 20),
         subject: 'Housing',
       },
       {
         name: 'Groceries',
         cost: 100.00,
-        billingDate: new Date(2023, 10, 25), // November 25, 2023
+        billingDate: new Date(2023, 10, 25),
         subject: 'Housing',
       },
     ],
@@ -24,19 +24,19 @@ export class SpendingService {
       {
         name: 'Netflix',
         cost: 33.00,
-        billingDate: new Date(2023, 10, 1), // November 1, 2023
+        billingDate: new Date(2023, 10, 1),
         subject: 'Personal',
       },
       {
         name: 'Prime',
         cost: 10.00,
-        billingDate: new Date(2023, 10, 5), // November 5, 2023
+        billingDate: new Date(2023, 10, 5),
         subject: 'Personal',
       },
       {
         name: 'Videoland',
         cost: 9.00,
-        billingDate: new Date(2023, 10, 10), // November 10, 2023
+        billingDate: new Date(2023, 10, 10),
         subject: 'Personal',
       },
     ],
@@ -44,7 +44,7 @@ export class SpendingService {
       {
         name: 'Petrol',
         cost: 75.00,
-        billingDate: new Date(2023, 10, 25), // November 25, 2023
+        billingDate: new Date(2023, 10, 25),
         subject: 'Transport',
       },
     ]
@@ -71,16 +71,46 @@ export class SpendingService {
       const filteredSpendings = this.spending[subject] || [];
       return filteredSpendings.reduce((total, item) => total + item.cost, 0);
     }
+
+    private generateTimestamp(): number {
+      return new Date().getTime();
+    }
   
     addSpending(name: string, cost: number, date: string, subject: string) {
       const billingDate = new Date(date);
   
       if (!isNaN(billingDate.getTime())) {
-        const newSpending = { name, cost, billingDate, subject };
+        const newSpending = { name, cost, billingDate, subject, timestamp: this.generateTimestamp() };
         this.spending[subject].push(newSpending);
         console.log('Updated spendings:', this.spending);
       } else {
         alert('Invalid date entered. Please enter a valid date.');
       }
     }
+
+    getLatestObjects() {
+      let allObjects = [];
+  
+      // Concatenate all objects from different categories into a single array
+      for (const category in this.spending) {
+        allObjects = allObjects.concat(this.spending[category]);
+      }
+  
+      if (allObjects.length > 0) {
+        // Sort the array by billing date and then by timestamp in descending order
+        allObjects.sort((a, b) => {
+          if (b.billingDate.getTime() === a.billingDate.getTime()) {
+            return b.timestamp - a.timestamp;
+          }
+          return b.billingDate.getTime() - a.billingDate.getTime();
+        });
+  
+        // Return the first three objects in the sorted array
+        return allObjects.slice(0, 3);
+      } else {
+        console.log('No objects found.');
+        return [];
+      }
+  }
+
 }

@@ -11,6 +11,7 @@ export class SpendingOverviewComponent implements OnInit{
   houseSpending: number = 0;
   personalSpending: number = 0;
   transportSpending: number = 0;
+  lastestSpending: any;
 
   ngOnInit(): void {
     this.updateSpending();
@@ -28,4 +29,5 @@ export class SpendingOverviewComponent implements OnInit{
     this.spendingService.addSpending(expenseName, cost, date, subject);
     this.updateSpending();
   }
+
 }

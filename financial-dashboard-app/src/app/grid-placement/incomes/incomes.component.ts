@@ -1,12 +1,15 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component } from '@angular/core';
 import { SpendingService } from '../../shared/spending.service';
+import { DoCheck } from '@angular/core';
 
 @Component({
-  selector: 'app-spendings',
-  templateUrl: './spendings.component.html',
-  styleUrl: './spendings.component.scss'
+  selector: 'app-incomes',
+  templateUrl: './incomes.component.html',
+  styleUrl: './incomes.component.scss'
 })
-export class SpendingsComponent implements DoCheck {
+
+
+export class IncomesComponent implements DoCheck {
   spendingsList: any[] = [];
   totalCost: number = 0;
 

@@ -52,6 +52,7 @@
   <dialog #dialog>
     <section class="add-spendings">
       <h1>Add spendings</h1>
+      <hr />
       <form class="addSpendings">
         <label for="expenseTitle">Expense Title</label>
         <input
@@ -65,7 +66,7 @@
         <input type="number" id="cost" placeholder="$" #costInput />
 
         <label for="date">Date</label>
-        <input type="text" id="date" placeholder="ddmmyy" #dateInput />
+        <input type="date" name="dateofbirth" id="dateofbirth" #dateInput />
 
         <label for="subject">Subject</label>
         <select name="subject" id="subject" #subjectInput>

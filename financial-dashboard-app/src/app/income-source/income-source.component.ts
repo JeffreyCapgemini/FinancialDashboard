@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,7 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './income-source.component.html',
   styleUrl: './income-source.component.scss'
 })
-export class IncomeSourceComponent {
+export class IncomeSourceComponent  {
+  // @Input() totalIncome: number = 0;
 
   income: number = 0;
 
@@ -35,7 +37,7 @@ export class IncomeSourceComponent {
   }
 
   ngOnInit() {
-    this.calculateHeightPercentage()
+    this.calculateHeightPercentage();
   }
 
   calculateHeightPercentage(): void {
@@ -48,5 +50,4 @@ export class IncomeSourceComponent {
       income.percentage = heightPercentage;
     }
   }
-
 }

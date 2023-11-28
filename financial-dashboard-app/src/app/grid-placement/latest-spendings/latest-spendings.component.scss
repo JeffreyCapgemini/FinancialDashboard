@@ -1,0 +1,28 @@
+@import '../../../stylings/_variables.scss';
+
+.latest-spendings-container{
+    background-color: $secondary-color;
+    color: $white;
+    border-radius: 20px;
+
+    h3{
+        padding-top: 7px;
+    }
+
+    .latestSpendings{
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 1px;
+    }
+
+    .threeSpendings{
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+    .spendingInfo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
