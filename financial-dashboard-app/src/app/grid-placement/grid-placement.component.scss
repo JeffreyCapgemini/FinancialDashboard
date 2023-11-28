@@ -8,64 +8,28 @@ main {
     grid-auto-flow: row;
     font-family: system-ui;
     background-color: $primary-color;
-    grid-template-areas:
-      "navigation balance . date account"
-      "navigation total-net-worth spendings spending income-goal"
-      "navigation income-source income spending notifications-expenses-animals"
-      "navigation income-expenses-graph income-vs-expenses . notifications-expenses-animals";
-  }
-  
-  .navigation {
-    grid-area: navigation;
-  }
-  
-  .balance {
-    grid-area: balance;
-  }
-  
-  .date {
-    grid-area: date;
-  }
-  
-  .account {
-    grid-area: account;
-  }
-  
-  .total-net-worth {
-    grid-area: total-net-worth;
-  }
-  
-  .spendings {
-    grid-area: spendings;
-  }
-  
-  .income {
-    grid-area: income;
-  }
-  
-  .income-source {
-    grid-area: income-source;
-  }
-  
-  .spending {
-    grid-area: spending;
-  }
-  
-  .income-goal {
-    grid-area: income-goal;
-  }
-  
-  .notifications-expenses-animals {
-    grid-area: notifications-expenses-animals;
-  }
-  
-  .income-expenses-graph {
-    grid-area: income-expenses-graph;
-  }
+    grid-template-areas: 
+    "navigation balance . date account"
+    "navigation total-net-worth spendings spending income-goal"
+    "navigation income-source income spending notifications-expenses-animals"
+    "navigation income-expenses-graph income-vs-expenses last-expenses notifications-expenses-animals"; 
+}
+.navigation { grid-area: navigation; }
+.balance { grid-area: balance; }
+.date { grid-area: date; }
+.account { grid-area: account; }
+.total-net-worth { grid-area: total-net-worth; }
+.spendings { grid-area: spendings; }
+.income { grid-area: income; }
+.income-source { grid-area: income-source; }
+.spending { grid-area: spending; }
+.income-goal { grid-area: income-goal; }
+.notifications-expenses-animals { grid-area: notifications-expenses-animals; }
+.income-expenses-graph { grid-area: income-expenses-graph; }
 
   .income-vs-expenses {
     grid-area: income-vs-expenses;
     grid-column-start: 3;
     grid-column-end: 5;
   }
-  
+.last-expenses { grid-area: last-expenses; }

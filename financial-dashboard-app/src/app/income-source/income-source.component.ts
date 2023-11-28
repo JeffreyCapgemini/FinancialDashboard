@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component } from '@angular/core';
 import { IncomeService } from '../shared/income.service';
 
@@ -13,7 +14,17 @@ export class IncomeSourceComponent {
   }
 
   ngOnInit() {
-    this.incomeService.calculateHeightPercentage()
+    this.calculateHeightPercentage();
   }
 
+  calculateHeightPercentage(): void {
+    this.income = this.incomeSources.reduce((acc: number, source) => {
+      return acc + source.income
+    }, 0)
+
+    for (let income of this.incomeSources) {
+      let heightPercentage = (100 * income.income) / this.income;
+      income.percentage = heightPercentage;
+    }
+  }
 }

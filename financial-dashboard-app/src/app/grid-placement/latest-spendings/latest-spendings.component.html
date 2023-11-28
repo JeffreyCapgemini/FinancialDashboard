@@ -1,0 +1,14 @@
+<section class="latest-spendings-container">
+  <div class="latestSpendings">
+    <header class="title">
+      <h3>Latest added spendings</h3>
+    </header>
+
+    <ul class="threeSpendings" *ngFor="let spending of latest">
+      <div class="spendingInfo">
+        <li>{{ spending.name }}</li>
+        <li>€{{ spending.cost }}</li>
+      </div>
+    </ul>
+  </div>
+</section>
