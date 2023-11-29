@@ -1,0 +1,19 @@
+@import '../../../stylings/variables';
+
+.calander-container {
+    background-color: #151a32;
+    color: white;
+    border-radius: 20px;
+
+    .calenderContent{
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      gap: 10;
+      padding-left: 15;
+    }
+
+    .dayDateTime{
+      padding-left: 10px;
+    }
+  }
