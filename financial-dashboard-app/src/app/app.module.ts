@@ -30,6 +30,8 @@ import { NavigationComponent } from './grid-placement/navigation/navigation.comp
     IncomesComponent,
     LatestSpendingsComponent,
     IncomeVsOutcomeComponent,
+    NavigationComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
