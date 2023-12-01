@@ -1,0 +1,32 @@
+@import '../../../stylings/_variables.scss';
+
+.navigation-container {
+    background-color: $secondary-color;
+    color: $white;
+    border-radius: 80px;
+  
+    .logo {
+      margin-top: 20px;
+      align-items: center;
+    }
+  
+    .months {
+      list-style: none;
+      padding-left: 0px;
+      text-align: center;
+  
+      li {
+        padding-bottom: 30px;
+
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+  
+        a:active {
+          color: orange;
+        }
+      }
+    }
+  }
+  
