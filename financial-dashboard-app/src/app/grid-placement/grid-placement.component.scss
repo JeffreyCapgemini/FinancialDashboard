@@ -1,19 +1,58 @@
 @import '../../stylings/_variables.scss';
 
-main {
-    display: grid;
-    grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.6fr 0.3fr 1fr 1.5fr;
-    gap: 10px 10px;
-    grid-auto-flow: row;
-    font-family: system-ui;
-    background-color: $primary-color;
-    grid-template-areas: 
-    "navigation balance . date account"
-    "navigation total-net-worth spendings spending income-goal"
-    "navigation income-source income spending notifications-expenses-animals"
-    "navigation income-expenses-graph income-vs-expenses last-expenses notifications-expenses-animals"; 
+.grid {
+  padding: $padding;
+  display: grid;
+  grid-template-columns: 0.5fr 1.2fr 1fr 1fr 1fr; 
+  grid-template-rows: min-content auto; 
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  font-family: system-ui;
+  background-color: $primary-color;
+  grid-template-areas: 
+  "navigation balance . date account"
+  "navigation total-net-worth spendings spending income-goal"
+  "navigation income-source income spending last-expenses"
+  "navigation income-expenses-graph income-expenses-graph income-vs-expenses last-expenses"; 
 }
+
+@media only screen and (max-width: 930px) { 
+  .grid {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: min-content auto; 
+    grid-template-areas: 
+    "navigation navigation"
+    "balance date"
+    "account account"
+    "total-net-worth spendings"
+    "spending income-goal"
+    "income-source income"
+    "last-expenses income-vs-expenses"
+    "income-expenses-graph income-expenses-graph"
+    ; 
+  }
+}
+
+@media only screen and (max-width: 563px) { 
+  .grid {
+    grid-template-columns: 1fr; 
+    grid-template-rows: min-content auto; 
+    grid-template-areas: 
+    "navigation"
+    "balance"
+    "date"
+    "account"
+    "spending"
+    "total-net-worth"
+    "spendings"
+    "last-expenses"
+    "income-source"
+    "income"
+    "income-expenses-graph"
+    "income-vs-expenses"; 
+  }
+}
+
 .navigation { grid-area: navigation; }
 .balance { grid-area: balance; }
 .date { grid-area: date; }
