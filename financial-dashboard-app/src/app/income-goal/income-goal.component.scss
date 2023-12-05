@@ -1,0 +1,60 @@
+@import "../../stylings/variables";
+
+.income-goal-container {
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    padding: $padding;
+    color: $white;
+
+    p, h4 {
+        margin: 0;
+        padding-bottom: .5em;
+    }
+
+    .lightGreen {
+        color: #0ea099;
+    }
+
+
+    .grey {
+        color: grey;
+    }
+
+    .income-goal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $mobile) { 
+            flex-direction: column;
+        }
+
+        > p {
+            font-size: 14px;
+        }
+
+        &__progress {
+
+        }
+    }
+
+    .income-progress-container {
+        background-color: black;
+        height: 15px;
+        width: 100%;
+        border-radius: $border-radius;
+        margin: 1em 0;
+        position: relative;
+
+        &__meter {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 15px;
+            width: 0;
+            border-radius: $border-radius;
+            background-color: #5220b3;
+            transition: width 1s ease-in-out;
+        }
+    }
+}
