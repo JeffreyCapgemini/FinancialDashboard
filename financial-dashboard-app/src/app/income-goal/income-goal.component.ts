@@ -21,9 +21,6 @@ export class IncomeGoalComponent {
     this.incomeService.calculateIncome();
     this.income = this.incomeService.income;
     this.calculateIncomeGoalPercentage()
-
-    console.log(this.income)
-    console.log(this.incomeGoalPercents)
   }
 
   calculateIncomeGoalPercentage() {
