@@ -1,0 +1,15 @@
+<section class="income-goal-container">
+    <div>
+        <p class="lightGreen">{{incomeGoalPercents}}%</p>
+        <h4>Income Goal</h4>
+        <div class="income-goal">
+            <p class="grey">Progress to month</p>
+            <span class="income-goal__progress">
+                <p> {{income}} / <span class="grey">{{incomeGoal}}</span></p>
+            </span>
+        </div>
+        <div class="income-progress-container">
+            <div class="income-progress-container__meter" [ngStyle]="{'width' : incomeGoalPercents + '%'}"></div>
+        </div>
+    </div>
+</section>

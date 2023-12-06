@@ -15,6 +15,7 @@ import { IncomeVsOutcomeComponent } from './income-vs-outcome/income-vs-outcome.
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { CalendarComponent } from './grid-placement/calender/calender.component';
 import { NavigationComponent } from './grid-placement/navigation/navigation.component';
+import { IncomeGoalComponent } from './income-goal/income-goal.component';
 
 
 
@@ -31,7 +32,8 @@ import { NavigationComponent } from './grid-placement/navigation/navigation.comp
     LatestSpendingsComponent,
     IncomeVsOutcomeComponent,
     NavigationComponent,
-    CalendarComponent
+    CalendarComponent,
+    IncomeGoalComponent
   ],
   imports: [
     BrowserModule,

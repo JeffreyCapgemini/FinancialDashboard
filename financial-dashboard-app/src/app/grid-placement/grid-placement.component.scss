@@ -16,7 +16,7 @@
   "navigation income-expenses-graph income-expenses-graph income-vs-expenses last-expenses"; 
 }
 
-@media only screen and (max-width: 930px) { 
+@media only screen and (max-width: $tablet) { 
   .grid {
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: min-content auto; 
@@ -33,7 +33,7 @@
   }
 }
 
-@media only screen and (max-width: 563px) { 
+@media only screen and (max-width: $mobile) { 
   .grid {
     grid-template-columns: 1fr; 
     grid-template-rows: min-content auto; 
